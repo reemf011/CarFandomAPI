@@ -2,13 +2,13 @@
 const express = require(`express`);
 const dotenv = require(`dotenv`);
 
-const initiateDBConnection = require(`./config/db`); 
+const initiateDBConnection = require(`./config/db`);
 
 dotenv.config({
-    path: `./config/.env`
+  path: `./config/.env`
 });
 
-const PORT =process.env.PORT;
+const PORT = process.env.PORT;
 
 const app = express();
 
