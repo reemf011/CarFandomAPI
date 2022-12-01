@@ -1,6 +1,6 @@
 const {Router} = require('express');
 
-const custServiceController = require('../controllers/Customer-Service');
+const custServiceController = require('../controllers/CustomerService');
 
 const custServiceRouter = Router();
 
