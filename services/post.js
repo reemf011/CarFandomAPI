@@ -1,4 +1,4 @@
-const PostModel = require('../models/post');
+const PostModel = require('../models/Post');
 
 module.exports.findAllposts = async () => {
     try{
