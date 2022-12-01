@@ -1,4 +1,4 @@
-const CustomerServiceModel = require('../models/Customer-Service');
+const CustomerServiceModel = require('../models/CustomerService');
 
 module.exports.findAllEmployees = async () => {
     try{

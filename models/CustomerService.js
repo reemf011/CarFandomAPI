@@ -31,3 +31,6 @@ const CustomerServiceSchema = new Schema({
     }
 
 });
+
+const CustomerServiceModel = model('Customer Service', CustomerServiceSchema);
+module.exports = CustomerServiceModel;
