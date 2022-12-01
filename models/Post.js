@@ -15,3 +15,6 @@ const PostSchema = new Schema({
     }
 
 });
+
+const PostModel = model('Customer Service', PostSchema);
+module.exports = PostModel;
