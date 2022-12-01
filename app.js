@@ -1,8 +1,9 @@
 
-const express = require(`express`);
-const dotenv = require(`dotenv`);
+const express = require('express');
+const dotenv = require('dotenv');
 
-const initiateDBConnection = require(`./config/db`);
+const initiateDBConnection = require('./config/db');
+
 const customerrouter = require("./routes/customer");
 
 const carRouter = require ('./routes/car');
@@ -13,13 +14,18 @@ const postRouter = require ('./routes/post');
 
 
 dotenv.config({
-  path: `./config/.env`
+  path: './config/.env'
 });
 
 const PORT = process.env.PORT;
 
 const app = express();
-app.use(`/customer`, customerrouter);
+app.use('/customer', customerrouter);
+app.use('/CustomerService', custServiceRouter);
+app.use('/post', postRouter);
+app.use('/feedback', feedbackRouter);
+app.use('/car', carRouter);
+
 app.listen(PORT, async () => {
   console.log(`server has been started as is listening to port ${PORT}`);
   await initiateDBConnection();
