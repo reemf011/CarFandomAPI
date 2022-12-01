@@ -4,6 +4,10 @@ const dotenv = require(`dotenv`);
 
 const initiateDBConnection = require(`./config/db`);
 
+const carRouter = require ('./routes/car');
+const feedbackRouter = require ('./routes/feedback');
+
+
 dotenv.config({
   path: `./config/.env`
 });
