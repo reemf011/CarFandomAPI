@@ -1,5 +1,5 @@
 const {Schema, model} = require ('mongoose');
-const CarSchema = new Schema ({
+const FeedbackSchema = new Schema ({
     
     feedbackID: {
         type: 'Number',
@@ -16,3 +16,8 @@ const CarSchema = new Schema ({
         required: true
     }
 });
+
+
+const FeedbackModel = model('Feedback', FeedbackSchema);
+
+module.exports = FeedbackModel;
