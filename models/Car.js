@@ -25,3 +25,8 @@ const CarSchema = new Schema ({
         required: true
     }
 });
+
+
+const CarModel = model('car', CarSchema);
+
+module.exports = CarModel;
