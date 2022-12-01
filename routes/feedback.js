@@ -1,6 +1,6 @@
 const {Router} = require('express');
 
-const feedbackController = require('../controllers/feedback');
+const feedbackController = require('../controllers/Feedback');
 
 const feedbackRouter = Router();
 

@@ -5,6 +5,6 @@ const postController = require('../controllers/Post');
 const postRouter = Router();
 
 
-postRouter.get('/', postController.getCar);
+postRouter.get('/', postController.getPost);
 
 module.exports = postRouter;

@@ -2,19 +2,19 @@ const {Schema, model} = require('mongoose');
 
 const PostSchema = new Schema({
     postID:{
-        type:'int',
+        type:'Number',
         required: true
     },
     custID:{
-        type:'int',
+        type:'Number',
         required: true
     },
     carID:{
-        type:'int',
+        type:'Number',
         required: true
     }
 
 });
 
-const PostModel = model('Customer Service', PostSchema);
+const PostModel = model('Post', PostSchema);
 module.exports = PostModel;

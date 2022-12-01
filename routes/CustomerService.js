@@ -5,6 +5,6 @@ const custServiceController = require('../controllers/CustomerService');
 const custServiceRouter = Router();
 
 
-custServiceRouter.get('/', custServiceController.getCar);
+custServiceRouter.get('/', custServiceController.getCustServiceEmp);
 
 module.exports = custServiceRouter;

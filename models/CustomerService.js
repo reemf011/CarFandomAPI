@@ -2,11 +2,11 @@ const {Schema, model} = require('mongoose');
 
 const CustomerServiceSchema = new Schema({
     custServiveID:{
-        type:'int',
+        type:'Number',
         required: true
     },
     custServiceName:{
-        type:'String',
+        type:'Number',
         required: true
     },
     custServiceRole:{
@@ -18,15 +18,15 @@ const CustomerServiceSchema = new Schema({
         required: true
     },
     custServicePhoneNum:{
-        type:'int',
+        type:'Number',
         required: true
     },
     custServiceAge:{
-        type:'int',
+        type:'Number',
         required: true
     },
     custServiceSalary:{
-        type:'int',
+        type:'Number',
         required: true
     }
 

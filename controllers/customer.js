@@ -1,4 +1,4 @@
-const customerservice=require(`../services/customer`);
+const customerservice=require(`../services/Customer`);
 module.exports.getCustomer= async(req,res)=>{
     try{
         const customer= await customer.findAllProducts();
