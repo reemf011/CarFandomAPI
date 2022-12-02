@@ -25,7 +25,7 @@ app.use('/CustomerService', custServiceRouter);
 app.use('/Post', postRouter);
 app.use('/Feedback', feedbackRouter);
 app.use('/Car', carRouter);
-
+app.use(express.json());
 app.listen(PORT, async () => {
   console.log(`server has been started as is listening to port ${PORT}`);
   await initiateDBConnection();
