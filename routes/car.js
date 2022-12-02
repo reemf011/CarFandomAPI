@@ -8,3 +8,5 @@ const carRouter = Router();
 carRouter.get('/', carController.getCar);
 
 module.exports = carRouter;
+
+carRouter.post('/', carController.postCar);

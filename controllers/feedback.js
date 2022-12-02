@@ -11,3 +11,22 @@ module.exports.getFeedback = async (req, res) => {
         });
     }
 };
+
+module.exports.postFeedback = async (req, res) => {
+    const feedbackInfo = {
+        feedbackID: req.body.feedbackID,
+        customerID: req.body.customerID,
+        feedbackContent: req.body.feedbackContent
+    };
+    try {
+        const createdFeedback = await feedbackService.addNewFeedback(feedbackInfo);
+        return res.status(201).send({
+            msg: 'feedback created successfully',
+            FeedbckID: createdFeedback._id
+        });
+    } catch (err) {
+        return res.status(500).send({
+            error: err.message
+        });
+    }
+};

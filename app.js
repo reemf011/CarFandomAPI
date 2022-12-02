@@ -4,6 +4,10 @@ const dotenv = require('dotenv');
 
 const initiateDBConnection = require('./config/db');
 
+const app = express();
+
+app.use(express.json());
+
 const customerrouter = require("./routes/Customer");
 
 const carRouter = require ('./routes/Car');
@@ -19,7 +23,7 @@ dotenv.config({
 
 const PORT = process.env.PORT;
 
-const app = express();
+
 app.use('/Customer', customerrouter);
 app.use('/CustomerService', custServiceRouter);
 app.use('/Post', postRouter);
