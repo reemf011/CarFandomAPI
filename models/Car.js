@@ -21,7 +21,7 @@ const CarSchema = new Schema ({
     },
 
     car_year: {
-        type: ' Number',
+        type: 'Number',
         required: true
     },
 

@@ -1,4 +1,4 @@
-const {Schema, model}=require(`mongoose`);
+const {Schema, model}=require('mongoose');
 const CustomerSchema= new Schema({
     ID:{
         type:'Number',
@@ -6,20 +6,20 @@ const CustomerSchema= new Schema({
     },
     Name:{
      
-        type:`String`,
+        type:'String',
         required: true
     },
     phonenumber:{
-        type:`Number`,
+        type:'Number',
         required: true
     },
 
     Email:{
      
-        type:`String`,
+        type:'String',
         required: true
     },
     
 })
-const CustomerModel = model(`Customer`,CustomerSchema);
+const CustomerModel = model('Customer',CustomerSchema);
 module.exports=CustomerModel;
