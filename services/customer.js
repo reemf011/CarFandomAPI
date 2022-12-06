@@ -1,10 +1,10 @@
-const Customermodel=require(`../models/Customer`);
+const Customermodel=require('../models/Customer');
 module.exports.findAllProducts= async ()=>{
     try{
         const customer= await Customermodel.find();
         return customer;
     }catch(err){
-        throw new Error(`Could not retrieve products`);
+        throw new Error('Could not retrieve products');
     }
 }
 module.exports.addNewCustomer = async(cinfo) =>{
