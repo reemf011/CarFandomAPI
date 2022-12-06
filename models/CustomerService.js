@@ -1,7 +1,7 @@
 const {Schema, model} = require('mongoose');
 
 const CustomerServiceSchema = new Schema({
-    custServiveID:{
+    custServiceID:{
         type:'Number',
         required: true
     },
