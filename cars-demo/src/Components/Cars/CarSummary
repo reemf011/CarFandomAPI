@@ -1,0 +1,26 @@
+const CarSummary = (props) => {
+    return (
+        <div className="flex flex-col items-center gap-8 rounded-xl bg-slate-200 w-[500px] aspect-square overflow-hidden">
+            <div className= "flex items-center justify-center bg-white w-full">
+                <img
+                className="object-scale-down w-[400px]"
+                src={props.car.imgURL}
+                alt={props.car.name}
+                />
+                </div>
+                {/* a div to represent the card body */}
+                <div className="flex flex-col justify-center items-center gap-2">
+                    <h3 className="font-bold">{props.car.name}</h3>
+                    <h5>{props.car.price} EGP</h5>
+                </div>
+                {/* a div to represent the card actions */}
+                <div className="flex gap-4">
+                    <button className="bg-white py-3 px-10 font-bold rounded-xl">
+                        view
+                    </button>
+                </div>
+            </div>
+    );
+};
+
+export default CarSummary;
