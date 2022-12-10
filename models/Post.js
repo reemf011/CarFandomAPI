@@ -12,6 +12,10 @@ const PostSchema = new Schema({
     carID:{
         type:'Number',
         required: true
+    },
+    PublishedDate:{
+        type:'Number',
+        required:true
     }
 
 });
