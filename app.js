@@ -1,6 +1,7 @@
 
 const express = require('express');
 const dotenv = require('dotenv');
+const cors = require ('cors');
 
 const initiateDBConnection = require('./config/db');
 
@@ -15,7 +16,8 @@ const feedbackRouter = require ('./routes/Feedback');
 
 const custServiceRouter = require ('./routes/CustomerService');
 const postRouter = require ('./routes/Post');
-
+const RepairRouter = require('./routes/Repair');
+const suppliersRouter = require ('./routes/suppliers');
 
 dotenv.config({
   path: './config/.env'
@@ -30,6 +32,9 @@ app.use('/Post', postRouter);
 app.use('/Feedback', feedbackRouter);
 app.use('/Car', carRouter);
 app.use(express.json());
+app.use (cors());
+app.use('/auth',authRouter);
+
 app.listen(PORT, async () => {
   console.log(`server has been started as is listening to port ${PORT}`);
   await initiateDBConnection();

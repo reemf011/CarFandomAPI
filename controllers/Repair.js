@@ -15,7 +15,6 @@ module.exports.getRepair = async (req, res) => {
 
 module.exports.postRepair = async (req, res) => {
     const RepairInfo = {
-        RId:req.body.RID,
         MName:req.body.MName,
         RDescription:req.body.RDescription,
         RLocation:req.body.RLocation
