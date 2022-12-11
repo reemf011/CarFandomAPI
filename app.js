@@ -31,9 +31,12 @@ app.use('/CustomerService', custServiceRouter);
 app.use('/Post', postRouter);
 app.use('/Feedback', feedbackRouter);
 app.use('/Car', carRouter);
+app.use('/Repair', RepairRouter);
+app.use('/suppliers', suppliersRouter);
+
 app.use(express.json());
 app.use (cors());
-app.use('/auth',authRouter);
+//app.use('/auth',authRouter);
 
 app.listen(PORT, async () => {
   console.log(`server has been started as is listening to port ${PORT}`);
