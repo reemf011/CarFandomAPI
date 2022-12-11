@@ -10,14 +10,6 @@ const PostSchema = new Schema({
         type:'Number',
         required: true
     },
-    custID:{
-        type:'Number',
-        required: true
-    },
-    carID:{
-        type:'Number',
-        required: true
-    },
     PublishedDate:{
         type:'Number',
         required:true

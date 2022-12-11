@@ -8,3 +8,4 @@ const postRouter = Router();
 postRouter.get('/', postController.getPost);
 
 module.exports = postRouter;
+

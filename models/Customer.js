@@ -1,9 +1,5 @@
 const {Schema, model}=require('mongoose');
 const CustomerSchema= new Schema({
-    ID:{
-        type:'Number',
-        required: true
-    },
     Name:{
      
         type:'String',
@@ -23,6 +19,6 @@ const CustomerSchema= new Schema({
         type: 'String',
         required:true
     }
-})
-const CustomerModel = model('Customer',CustomerSchema);
+});
+const CustomerModel = model('customer',CustomerSchema);
 module.exports=CustomerModel;

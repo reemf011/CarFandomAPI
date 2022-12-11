@@ -1,5 +1,7 @@
 const bcrypt=require('bcrypt');
-cont CustomerModel=require('../models/Customer');
+
+const CustomerModel=require('../models/Customer');
+
 module.export.CreateUser= async(userInfo) =>{
     try{
         let hashedPassword= await bcrypt.hash(userInfo.password,12);
@@ -52,7 +54,7 @@ module.exports.doesUserexist=async(Email) =>{
         throw new Error('Failure to sign in');
     }
  };
- module.exports.postLogin = asyn (req,res) => {
+ module.exports.postLogin = async (req,res) => {
     const {Email,password}= req.body;
     const user= await AuthService.checkCredentials(Email,password);
     if (!user) {
@@ -61,14 +63,15 @@ module.exports.doesUserexist=async(Email) =>{
        ' Invalid credentials'
         });
     }
-        const jwt = await AuthService. generateJWT(user) ;
+        try {const jwt = await AuthService. generateJWT(user) ;
         res. send ({
         jwt: jwt, 
         message:
         'Logged in successfully.'
         });
-    }catch (err) {
+    } catch (err) {
         res.status (500) . send ({
         error: error.message
         });
 }
+ };

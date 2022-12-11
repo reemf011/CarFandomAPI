@@ -2,7 +2,7 @@ const carService = require('../services/Car');
 
 module.exports.getCar = async (req, res) => {
     try {
-        const car = await carService.findAllProducts();
+        const car = await carService.findAllcars();
         res.send({car});
     } catch (err) {
         res.status(500);

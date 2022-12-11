@@ -2,8 +2,8 @@ const PostModel = require('../models/Post');
 
 module.exports.findAllposts = async () => {
     try{
-        const posts = await PostModel.find();
-        return Employees;
+        const Post = await PostModel.find();
+        return Post;
 
 
     } catch(err){
@@ -13,7 +13,7 @@ module.exports.findAllposts = async () => {
 
 module.exports.addNewPost = async (PostInfo) => {
     try{
-        const Posts = new PostModel({
+        const Post = new PostModel({
         postName: addNewPost.postName,
         postPrice: addNewPost.postPrice,
         custID: addNewPost.custID,
