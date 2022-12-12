@@ -6,8 +6,8 @@ const FeedbackSchema = new Schema ({
         required: true
     },
 
-    customerID: {
-        type: 'Number',
+    customername: {
+        type: 'String',
         required: true
     },
 

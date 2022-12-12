@@ -3,17 +3,17 @@ const RepairSchema= new Schema({
 
     MName:{
      
-        type:`String`,
+        type:'String',
         required: true
     },
     RDescription:{
-        type:`String`,
+        type:'String',
         required: true
     },
 
     RLocation:{
      
-        type:`String`,
+        type:'String',
         required: true
     }
     

@@ -1,4 +1,4 @@
-const FeedbackModel = require('../models/Feedback');
+const FeedbackModel = require('../models/feedback');
 
 module.exports.findAllProducts = async () => {
     try{

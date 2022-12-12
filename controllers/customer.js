@@ -22,7 +22,7 @@ module.exports.postCustomer = async(req,res)=>{
         const createdcustomer = await customerservice.addNewCustomer(customerInfo);
         return res.status(201).send({
             msg:'Customer created successfully',
-            customerid: createdcustomer.ID
+            customerid: createdcustomer._id
         });
     }catch(err){
         return res.status(500).send({

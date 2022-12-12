@@ -1,4 +1,4 @@
-const Customermodel=require('../models/Customer');
+const Customermodel=require('../models/customer');
 module.exports.findAllProducts= async ()=>{
     try{
         const customer= await Customermodel.find();
