@@ -29,4 +29,4 @@ module.exports.postCustomer = async(req,res)=>{
             error:err.message 
         });
     }
-}
+};

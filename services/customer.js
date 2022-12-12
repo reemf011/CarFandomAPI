@@ -6,7 +6,8 @@ module.exports.findAllProducts= async ()=>{
     }catch(err){
         throw new Error('Could not retrieve products');
     }
-}
+};
+
 module.exports.addNewCustomer = async(cinfo) =>{
     try{
         const cust= new Customermodel({
@@ -21,3 +22,4 @@ module.exports.addNewCustomer = async(cinfo) =>{
         throw new Error('Could not create product');
     }
 };
+

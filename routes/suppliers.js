@@ -6,3 +6,5 @@ const suppliersRouter = Router();
 suppliersRouter.post('/',suppliersController.postSupplier);
 
 module.exports = suppliersRouter;
+
+suppliersRouter.post('/', suppliersController.postSupplier);

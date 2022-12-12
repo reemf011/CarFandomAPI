@@ -10,6 +10,7 @@ module.exports.findAllEmployees = async () => {
     throw new Error("could not retrieve customer service employees");
 }
 };
+
 module.exports.addNewEmployees = async (EmployeesInfo) => {
     try{
         const Employees = new CustomerServiceModel({

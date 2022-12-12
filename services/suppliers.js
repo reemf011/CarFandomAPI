@@ -6,7 +6,8 @@ module.exports.findAllSuppliers= async ()=>{
     }catch(err){
         throw new Error('Could not retrieve suppliers');
     }
-}
+};
+
 module.exports.addNewSupplier = async(Sinfo) =>{
     try{
         const supp= new Suppliermodel({

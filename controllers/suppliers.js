@@ -1,5 +1,18 @@
-const azMapsService = require('../services/azMaps');
+//const azMapsService = require('../services/azMaps');
 const suppliersService = require('../services/suppliers');
+
+module.exports.getSuppliers = async (req, res) => {
+    try {
+        const suppliers = await suppliersService.findAllSuppliers();
+        req.send({suppliers});
+    } catch (err) {
+        res.status(500);
+        res.send ({
+            error: err
+        });
+    }
+};
+
 
 module.exports.postSupplier = async(req,res) => {
     const supplierInfo ={

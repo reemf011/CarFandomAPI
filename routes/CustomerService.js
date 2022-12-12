@@ -8,3 +8,5 @@ const custServiceRouter = Router();
 custServiceRouter.get('/', custServiceController.getCustServiceEmp);
 
 module.exports = custServiceRouter;
+
+custServiceRouter.post('/',custServiceController.postCustService);

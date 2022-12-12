@@ -11,6 +11,7 @@ module.exports.findAllposts = async () => {
 }
 };
 
+
 module.exports.addNewPost = async (PostInfo) => {
     try{
         const Posts = new PostModel({

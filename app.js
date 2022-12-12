@@ -1,7 +1,7 @@
 
 const express = require('express');
 const dotenv = require('dotenv');
-const cors = require ('cors');
+//const cors = require ('cors');
 
 const initiateDBConnection = require('./config/db');
 
@@ -35,7 +35,7 @@ app.use('/Repair', RepairRouter);
 app.use('/suppliers', suppliersRouter);
 
 app.use(express.json());
-app.use (cors());
+//app.use (cors());
 //app.use('/auth',authRouter);
 
 app.listen(PORT, async () => {
